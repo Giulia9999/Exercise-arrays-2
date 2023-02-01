@@ -13,7 +13,7 @@ public class Main {
         arrayLength(aliceToDos, bobToDos, timToDos);
         System.out.println("---------------------------------------------------");
         sortComparison(aliceToDos,bobToDos,timToDos);
-        System.out.printf("---------------------------------------------------");
+        System.out.println("---------------------------------------------------");
         setComparison(aliceToDos,bobToDos,timToDos);
     }
 
