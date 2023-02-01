@@ -14,7 +14,6 @@ public class Main {
         System.out.println("---------------------------------------------------");
         sortComparison(aliceToDos,bobToDos,timToDos);
         System.out.println("---------------------------------------------------");
-        setComparison(aliceToDos,bobToDos,timToDos);
     }
 
     public static void arrayEquals(String[] aliceToDos,String[] bobToDos, String[] timToDos){
@@ -37,20 +36,4 @@ public class Main {
 
     }
 
-    public static void setComparison(String[] aliceToDos,String[] bobToDos, String[] timToDos){
-        Set<String[]> setAlice = new HashSet<>(aliceToDos.length);
-        setAlice.add(aliceToDos);
-        Collection<String[]> aliceSort = setAlice.stream().sorted().toList();
-
-        Set<String[]> setBob = new HashSet<>(bobToDos.length);
-        setBob.add(bobToDos);
-        Collection<String[]> bobSort = setBob.stream().sorted().toList();
-
-        Set<String[]> setTim = new HashSet<>(timToDos.length);
-        setTim.add(timToDos);
-        Collection<String[]> timSort = setAlice.stream().sorted().toList();
-
-        System.out.printf("Is Alice having the same tasks of Bob? %s %n", aliceSort.equals(bobSort));
-        System.out.printf("Is Alice having the same tasks of Tim? %s %n", aliceSort.equals(timSort));
-    }
 }
