@@ -14,6 +14,8 @@ public class Main {
         System.out.println("---------------------------------------------------");
         sortComparison(aliceToDos,bobToDos,timToDos);
         System.out.println("---------------------------------------------------");
+        setComparison(aliceToDos,bobToDos,timToDos);
+        System.out.println("---------------------------------------------------");
     }
 
     public static void arrayEquals(String[] aliceToDos,String[] bobToDos, String[] timToDos){
@@ -34,6 +36,17 @@ public class Main {
         System.out.printf("Is Alice having the same tasks of Bob? %s %n", Arrays.equals(aliceToDos, bobToDos));
         System.out.printf("Is Alice having the same tasks of Tim? %s %n", Arrays.equals(aliceToDos, timToDos));
 
+    }
+
+    public static void setComparison(String[] aliceToDos,String[] bobToDos, String[] timToDos){
+        Set<String> aliceSet = new HashSet<>(List.of(aliceToDos));
+
+        Set<String> bobSet = new HashSet<>(List.of(bobToDos));
+
+        Set<String> timSet = new HashSet<>(List.of(timToDos));
+
+        System.out.printf("Is Alice having the same tasks of Bob? %s %n", aliceSet.equals(bobSet));
+        System.out.printf("Is Alice having the same tasks of Tim? %s %n", aliceSet.equals(timSet));
     }
 
 }
